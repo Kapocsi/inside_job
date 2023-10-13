@@ -47,15 +47,11 @@ q:before, q:after ){
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.mapSize{
+	height: 400px;
+	width: auto;
+}
 </style>
 
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-<script>
-    import SmallVenue from "./Venue/SmallVenue.svelte";
-</script>
-
-
-<h1>Hello</h1>
+<img class=mapSize src="/map.svg" alt="map" >
