@@ -35,7 +35,11 @@
   {#each events as event (event.title)}
     
     {#if event.focused}
-    hello
+    <div class="bigEvent" on:click={() => handleEventClick(event)}>
+        <h3>{event.title}</h3>
+        <p>Date: {event.date}</p>
+        <p>Description: {event.description}</p>
+        </div>
     {:else}
     <div class="event" on:click={() => handleEventClick(event)}>
     <h3>{event.title}</h3>
@@ -62,9 +66,15 @@
       background-color: #e0e0e0;
     }
 
-    #focus {
-        max-width: 60%;
-        max-height: 60%;
+    .bigEvent{
+      cursor: pointer;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      transition: background-color 0.2s;
+      max-width: 60%;
     }
     
   </style>
