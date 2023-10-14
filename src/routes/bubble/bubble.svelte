@@ -1,10 +1,13 @@
 <script>
 	export let data;
+	export let selected;
+
 	import { onMount } from 'svelte';
 	import * as Highcharts from 'highcharts';
 	import HighchartsMore from 'highcharts/highcharts-more';
 	import HighchartsExporting from 'highcharts/modules/exporting';
 	import HighchartsAccessibility from 'highcharts/modules/accessibility';
+	import { writable } from 'svelte/store';
 
 	onMount(() => {
 		console.log(data);
@@ -29,7 +32,7 @@
 				packedbubble: {
 					events: {
 						click: function (event) {
-							console.log(event.point);
+							selected.set(event.point)
 						}
 					},
 					minSize: '30%',
