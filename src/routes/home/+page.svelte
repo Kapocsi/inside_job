@@ -13,8 +13,7 @@
             Gather Grid
         </div>
         <select>
-            <option>1</option>
-            <option>2</option>
+            <option>Demo</option>
         </select>
     </div>
 </div>
@@ -28,7 +27,7 @@
         justify-content: center;
         height: 100vh;
         /* madefrom chat gpt */
-        background: 
+        background:
                 linear-gradient(0deg, #f0f0f0 1px, transparent 1px),
                 linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
             background-size: 20px 20px;
