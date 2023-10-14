@@ -12,7 +12,6 @@
 		const chart = Highcharts.chart({
 			chart: {
 				type: 'packedbubble',
-				height: '100%',
 				renderTo: 'chart-container'
 			},
 			title: {
@@ -25,6 +24,11 @@
 			},
 			plotOptions: {
 				packedbubble: {
+					events: {
+						click: function (event) {
+							console.log(event.point);
+						}
+					},
 					minSize: '30%',
 					maxSize: '120%',
 					layoutAlgorithm: {
@@ -557,11 +561,16 @@
 	});
 </script>
 
-<div id="chart-container" />
+<div class="container">
+	<div id="chart-container" />
+</div>
 
 <style>
 	#chart-container {
-		width: 100%;
+		height: 100dvh;
+	}
+
+	.container {
 		outline: 1px solid red;
 	}
 </style>
