@@ -47,6 +47,11 @@ q:before, q:after ){
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+:global(*) {
+	font-family: open-sans;
+}
+
 </style>
 
 
