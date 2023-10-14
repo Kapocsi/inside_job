@@ -46,7 +46,9 @@
 <div class="container">
 	<div>stuufs</div>
 	<dv>
-		<Bubble data={$recent_events} />
+		{#if $recent_events.length > 0}
+			<Bubble data={$recent_events} />
+		{/if}
 	</dv>
 </div>
 

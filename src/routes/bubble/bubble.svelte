@@ -7,10 +7,11 @@
 	import HighchartsAccessibility from 'highcharts/modules/accessibility';
 
 	onMount(() => {
+		console.log(data);
 		HighchartsMore(Highcharts);
 		HighchartsExporting(Highcharts);
 		HighchartsAccessibility(Highcharts);
-		Highcharts.chart({
+		let chart = Highcharts.chart({
 			chart: {
 				type: 'packedbubble',
 				renderTo: 'chart-container'
